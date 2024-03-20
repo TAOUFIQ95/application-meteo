@@ -1,0 +1,11 @@
+<div class="weather-container">
+    <input type="text" [(ngModel)]="city" placeholder="Entrez le nom d'une ville">
+    <button (click)="getWeather()">Obtenir la météo</button>
+    <div *ngIf="weatherInfo">
+    <h2>Météo à {{ weatherInfo.name }}</h2>
+    <p>Température: {{ weatherInfo.main.temp }} °C</p>
+    <p>Conditions: {{ weatherInfo.weather[0].description }}</p>
+    <p>Humidité: {{ weatherInfo.main.humidity }}%</p>
+    <p>Vent: {{ weatherInfo.wind.speed }} km/h</p>
+    </div>
+    </div>
